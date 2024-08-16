@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /php3/php2/WebAo/
+
+# Chuyển hướng tất cả yêu cầu không phải là file hoặc thư mục có thật đến index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L]
